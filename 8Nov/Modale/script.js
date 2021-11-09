@@ -64,7 +64,7 @@ function hideModal() {
 //     window.location.href = "http://google.com";
 //   }
 
-function loeadModal() {document.body.removeChild(modal);
+function loadModal() {document.body.removeChild(modal);
     setTimeout(() => {
         document.body.append(modal);;
       }, 10000);}
@@ -76,7 +76,7 @@ function loeadModal() {document.body.removeChild(modal);
   acceptBtn.addEventListener("click", hideModal, { once: true });
 //   denyBtn.addEventListener("click", redirectToGoogle, { once: true });
 
-  document.addEventListener("DOMContentLoaded", loeadModal)
+  document.addEventListener("DOMContentLoaded", loadModal)
   
   // ------------------------ Modale fine ------------------------
   

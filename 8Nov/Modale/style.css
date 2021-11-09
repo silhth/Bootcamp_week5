@@ -124,19 +124,20 @@ li {
     transition: opacity 0.35s;
   }
   
-  .modal h3 {
+  .modal-h3 {
     margin: 5px 0;
     font-size: 1.6rem;
   }
   
-  .modal p {
+  .modal-p {
     color: rgb(169, 169, 169);
-    padding: 10px 30px;
+    padding: 10px 20px;
     font-size: 1.1rem;
     margin: 0;
+    text-align: center;
   }
   
-  .modal img {
+  .modal-img {
     width: 50px;
   }
   
@@ -156,7 +157,11 @@ li {
     font-size: 0.8rem;
     cursor: pointer;
   }
-  
+
+  .hide{
+    display: none;
+  }
+
   #btn-accept {
     border: 0;
     background: lightseagreen;

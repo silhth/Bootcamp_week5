@@ -60,9 +60,14 @@ function hideModal() {
     }, 350);
   }
   
-  function redirectToGoogle() {
-    window.location.href = "http://google.com";
-  }
+//   function redirectToGoogle() {
+//     window.location.href = "http://google.com";
+//   }
+
+function loeadModal() {document.body.removeChild(modal);
+    setTimeout(() => {
+        document.body.append(modal);;
+      }, 10000);}
   
   const modal = document.querySelector(".modal");
   const acceptBtn = document.querySelector("#btn-accept");
@@ -71,13 +76,7 @@ function hideModal() {
   acceptBtn.addEventListener("click", hideModal, { once: true });
 //   denyBtn.addEventListener("click", redirectToGoogle, { once: true });
 
-  document.addEventListener("DOMContentLoaded", function(){
-    document.body.removeChild(modal);
-    setTimeout(() => {
-        document.body.append(modal);;
-      }, 10000);
-   
-})
+  document.addEventListener("DOMContentLoaded", loeadModal)
   
   // ------------------------ Modale fine ------------------------
   

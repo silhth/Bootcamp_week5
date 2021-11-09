@@ -10,8 +10,7 @@ function calculator(numbers) {
 
     function sub (){
         let subTotal = numbers[0];
-        let nums = numbers.slice(1)
-        for (num of nums) subTotal -= num;
+        for (num of numbers.slice(1)) subTotal -= num;
 
         return subTotal;
     }
@@ -28,8 +27,7 @@ function calculator(numbers) {
 
     function divi (){
         let diviTotal = numbers[0];
-        let nums = numbers.slice(1)
-        for (num of nums) diviTotal /= num;
+        for (num of numbers.slice(1)) diviTotal /= num;
  
         return diviTotal;
    
@@ -44,7 +42,7 @@ function calculator(numbers) {
 }
 
 
-console.log(calculator([100,5,4]).divi)
+console.log(calculator([100,5,15]).sub)
 // -------------------------------------------------calc 2 ----------------------------------------------------
 
 // function calculator(numbers) {

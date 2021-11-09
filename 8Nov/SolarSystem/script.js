@@ -30,51 +30,83 @@ const diameter = (planets) => planets.radius * 2;
 const solarSystemDiameter = solarSystem.map(diameter);
 console.log(diameter);
 
-// const rows = (row, rowIt) => {
 
-//     if (row.name !== rowIt.name) {
-//         let newrow = {
-//             name: rowIt.name,
-//             radius: row.radius,
-//             surface: row.surface
-//         }
-//         return newrow
-
-//     }
+const pName =solarSystem.map(planet => planet.name);
 
 
-// };
+const translatedP = pName.map((planet) => {
+    if (planet === 'Sun') return 'Sole';
+    if (planet === 'Mercury') return 'Mercurio';
+    if (planet === 'Venus') return 'Venere';
+    if (planet === 'Earth') return 'Terra';
+    if (planet === 'Mars') return 'Marte';
+    if (planet === 'Jupiter') return 'Giove';
+    if (planet === 'Saturn') return 'Saturno';
+    if (planet === 'Uranus') return 'Uranio';
+    if (planet === 'Neptune') return 'Nettuno';
+});
 
-// const newmm = solarSystem.map(rows(...solarSystem, ...solarSystemIt))
 
 
-// const aa = (planets) => {let pname = array.forEach(element => {
+
+
+// const solarIt = solarSystem.map(planet => {
+//     if (planet.name === 'Sun') {planet.name === 'Sole'} ;
+//     if (planet.name === 'Mercury')  {planet.name ===  'Mercurio'};
+//     if (planet.name === 'Venus')  {planet.name ===  'Venere'};
+//     if (planet.name === 'Earth')  {planet.name ===  'Terra'};
+//     if (planet.name === 'Mars')  {planet.name ===  'Marte'};
+//     if (planet.name === 'Jupiter')  {planet.name ===  'Giove'};
+//     if (planet.name === 'Saturn')  {planet.name ===  'Saturno'};
+//     if (planet.name === 'Uranus')  {planet.name ===  'Uranio'};
+//     if (planet.name === 'Neptune')  {planet.name ===  'Nettuno'};
+//     return planet
+// })
     
-// });}
-// console.log(aa(solarSystemIt))
-const rows = solarSystem.map((row) => {
-    const mmm = (o => o.name !== row.name ? Object.values(o) : Object.values(row))
-           let newrow = {
-            name: mmm(solarSystemIt),
-            radius: row.radius,
-            surface: row.surface
-        }
-        return newrow
+// console.log(solarIt)
 
+const translate = (planet) => {
+    switch (planet.name) {
+      case 'Sun':
+        planet.name = 'Sole';
+        break;
+  
+      case 'Mercury':
+        planet.name = 'Mercurio';
+        break;
+  
+      case 'Venus':
+        planet.name = 'Venere';
+        break;
+  
+      case 'Earth':
+        planet.name = 'Terra';
+        break;
+  
+      case 'Mars':
+        planet.name = 'Marte';
+        break;
+  
+      case 'Jupiter':
+        planet.name = 'Giove';
+        break;
+  
+      case 'Saturn':
+        planet.name = 'Saturno';
+        break;
+  
+      case 'Uranus':
+        planet.name = 'Uranio';
+        break;
+  
+      case 'Neptune':
+        planet.name = 'Nettuno';
+        break;
+  
     }
+    return planet
+  }
 
+  const solarIta = solarSystem.map(translate);
 
-);
-
-        
-console.log(rows);
-
-
-// // const mmm = (a,b)=> {
-// //     a.name !== b.name ? a.name: b.name
-// // }
-
-// // const cc= mmm(...solarSystemIt, ...solarSystem)
-// console.log (solarSystemIt)
-// console.log(...solarSystemIt)
-// // solarSystemIt.find(o => o.name !== row.name ? o.name: row.name)
+//   console.log(solarIta)
